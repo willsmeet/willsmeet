@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: ['/assets/Willsmeet1.jpg'],
   },
   robots: { index: true, follow: true },
-  icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
+  icons: { icon: '/assets/newlogo.png', apple: '/assets/newlogo.png' },
 }
 
 export const viewport: Viewport = {

@@ -163,7 +163,7 @@ export default function Stats() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
             <div className="relative flex h-full min-h-[115px] sm:min-h-[135px] flex-col justify-end p-3 sm:p-4">
               <Clock className="mb-1 h-3.5 w-3.5 text-blue-400" />
-              <div className="text-2xl font-bold text-white">
+              <div className="text-xl sm:text-2xl font-bold text-white">
                 <AnimatedCounter value={61} suffix="%" inView={inView} />
               </div>
               <p className="mt-0.5 text-xs text-zinc-300">in 24 Hours</p>
@@ -182,7 +182,7 @@ export default function Stats() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
             <div className="relative flex h-full min-h-[115px] sm:min-h-[135px] flex-col justify-end p-3 sm:p-4">
               <TrendingUp className="mb-1 h-3.5 w-3.5 text-purple-400" />
-              <div className="text-2xl font-bold text-white">
+              <div className="text-xl sm:text-2xl font-bold text-white">
                 <AnimatedCounter value={97} suffix="%" inView={inView} />
               </div>
               <p className="mt-0.5 text-xs text-zinc-300">in 48 Hours</p>
@@ -201,7 +201,7 @@ export default function Stats() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
             <div className="relative flex h-full min-h-[115px] sm:min-h-[135px] flex-col justify-end p-3 sm:p-4">
               <Users className="mb-1 h-3.5 w-3.5 text-amber-400" />
-              <div className="text-2xl font-bold text-white">
+              <div className="text-xl sm:text-2xl font-bold text-white">
                 <AnimatedCounter value={500} suffix="+" inView={inView} />
               </div>
               <p className="mt-0.5 text-xs text-zinc-300">Enterprise Clients</p>
@@ -220,7 +220,7 @@ export default function Stats() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
             <div className="relative flex h-full min-h-[115px] sm:min-h-[135px] flex-col justify-end p-3 sm:p-4">
               <RefreshCw className="mb-1 h-3.5 w-3.5 text-rose-400" />
-              <div className="text-2xl font-bold text-white">
+              <div className="text-xl sm:text-2xl font-bold text-white">
                 <AnimatedCounter
                   value={99.99}
                   suffix="%"
@@ -244,7 +244,7 @@ export default function Stats() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
             <div className="relative flex h-full min-h-[115px] sm:min-h-[135px] flex-col justify-end p-3 sm:p-4">
               <Globe className="mb-1 h-3.5 w-3.5 text-cyan-400" />
-              <div className="text-2xl font-bold text-white">
+              <div className="text-xl sm:text-2xl font-bold text-white">
                 <AnimatedCounter value={1200} suffix="+" inView={inView} />
               </div>
               <p className="mt-0.5 text-xs text-zinc-300">Orders / Month</p>
