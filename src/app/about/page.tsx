@@ -100,7 +100,7 @@ function AnimatedCounter({ value, suffix = '', decimals = 0, className = '' }: {
   }, [value])
 
   return (
-    <span ref={ref} className={className || "text-3xl font-bold text-brand-400"}>
+    <span ref={ref} className={className || "text-xl md:text-3xl font-bold text-brand-400"}>
       {decimals > 0 ? count.toFixed(decimals) : Math.floor(count)}{suffix}
     </span>
   )
