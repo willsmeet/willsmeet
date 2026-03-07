@@ -27,7 +27,7 @@ const perks = [
     {
         icon: Users,
         title: 'A Real Team',
-        description: 'Collaboration over silos. We have fun, support each other, and celebrate wins — big and small — together.',
+        description: 'Collaboration over silos. We have fun, support each other, and celebrate wins big and small together.',
         color: 'from-violet-500 to-purple-500',
         bgColor: 'bg-violet-500/10',
         borderColor: 'border-violet-500/20',
