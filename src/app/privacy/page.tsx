@@ -132,7 +132,7 @@ export default function PrivacyPage() {
 
                   <div className="grid gap-4 sm:grid-cols-3">
                     <a
-                      href="mailto:info@willsmeet.com"
+                      href="mailto:sales@willsmeet.com"
                       className="flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 border border-white/10 hover:border-brand-500/30 transition-all"
                     >
                       <div className="p-2 bg-brand-500/10 border border-brand-500/20 rounded-lg">
@@ -140,7 +140,7 @@ export default function PrivacyPage() {
                       </div>
                       <div>
                         <div className="text-xs text-gray-500">Email</div>
-                        <div className="text-sm font-medium text-white">info@willsmeet.com</div>
+                        <div className="text-sm font-medium text-white">sales@willsmeet.com</div>
                       </div>
                     </a>
 

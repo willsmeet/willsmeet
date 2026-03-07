@@ -63,9 +63,9 @@ export default function CTA() {
 
         {/* Quick contact */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-brand-100/80">
-          <a href="mailto:info@willsmeet.com" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href="mailto:sales@willsmeet.com" className="flex items-center gap-2 hover:text-white transition-colors">
             <Mail className="w-4 h-4" />
-            info@willsmeet.com
+            sales@willsmeet.com
           </a>
           <span className="hidden sm:block w-1 h-1 bg-brand-300/50 rounded-full" />
           <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-white transition-colors">

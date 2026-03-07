@@ -14,7 +14,7 @@ const contactInfo = [
     details: ['#1496, 19th main road, Sector - 1 HSR layout', 'Opp. Park Square Apartment', 'Bangalore 560102'],
     color: 'from-orange-500 to-amber-500',
     bgColor: 'bg-orange-500/10',
-    href: 'https://www.google.com/maps/search/?api=1&query=1496+19th+main+road+Sector+1+HSR+layout+Bangalore+560102',
+    href: 'https://www.google.com/maps/place/Willsmeet/@12.9173026,77.6436917,17z/data=!4m6!3m5!1s0x3bae15f0d26b3691:0x577144e881b449ad!8m2!3d12.9186621!4d77.6451508!16s%2Fg%2F11rk021vld!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D',
     external: true,
   },
   {
@@ -28,10 +28,10 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['info@willsmeet.com'],
+    details: ['sales@willsmeet.com'],
     color: 'from-emerald-500 to-teal-500',
     bgColor: 'bg-emerald-500/10',
-    href: 'mailto:info@willsmeet.com',
+    href: 'mailto:sales@willsmeet.com',
   },
   {
     icon: Clock,
@@ -107,9 +107,8 @@ export default function ContactPage() {
   const whatsappMessage = encodeURIComponent('Hi Willsmeet! I would like to inquire about your services.')
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
 
-  const googleMapsEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9697789702614!2d77.6346!3d12.9116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzQyLjAiTiA3N8KwMzgnMDQuNiJF!5e0!3m2!1sen!2sin!4v1234567890'
-
-  return (
+  const googleMapsEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.850904216672!2d77.64369167408357!3d12.917302638288882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15f0d26b3691%3A0x577144e881b449ad!2sWillsmeet!5e0!3m2!1sen!2sin!4v1772883050751!5m2!1sen!2sin'
+ return (
     <>
       <Header />
       <main className="bg-[var(--bg-primary)]">
@@ -343,7 +342,7 @@ export default function ContactPage() {
                         #1496, 19th main road, Sector - 1 HSR layout, Bangalore 560102
                       </p>
                       <a
-                        href="https://www.google.com/maps/search/?api=1&query=1496+19th+main+road+Sector+1+HSR+layout+Bangalore+560102"
+                        href="https://www.google.com/maps/place/Willsmeet/@12.9173026,77.6436917,17z/data=!4m6!3m5!1s0x3bae15f0d26b3691:0x577144e881b449ad!8m2!3d12.9186621!4d77.6451508!16s%2Fg%2F11rk021vld!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"

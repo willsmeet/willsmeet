@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin, Phone, Mail, Linkedin, Share2, Check, ExternalLink, ArrowRight, ArrowUpRight } from 'lucide-react'
 import Logo from '../../public/assets/Willsmeet_white.png'
+import { usePathname } from 'next/navigation'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -21,6 +22,8 @@ const legalLinks = [
 
 export default function Footer() {
   const [copied, setCopied] = useState(false)
+  const pathname = usePathname()
+  const hideBanner = pathname.startsWith('/solutions')
 
   const handleShare = async () => {
     const url = window.location.origin
@@ -42,12 +45,12 @@ export default function Footer() {
     }
   }
 
-  const googleMapsUrl = 'https://www.google.com/maps/search/?api=1&query=1496+19th+main+road+Sector+1+HSR+layout+Bangalore+560102'
+  const googleMapsUrl = 'https://www.google.com/maps/place/Willsmeet/@12.9173026,77.6436917,17z/data=!4m6!3m5!1s0x3bae15f0d26b3691:0x577144e881b449ad!8m2!3d12.9186621!4d77.6451508!16s%2Fg%2F11rk021vld!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D'
 
   return (
     <footer className="relative bg-[var(--bg-primary)]">
       {/* CTA Banner Section */}
-      <div className="px-4 sm:px-6 lg:px-8 py-12 mx-auto max-w-7xl">
+     {!hideBanner && <div className="px-4 sm:px-6 lg:px-8 py-12 mx-auto max-w-7xl">
         <div className="relative rounded-3xl overflow-hidden">
           {/* Banner Image */}
           <Image
@@ -61,8 +64,10 @@ export default function Footer() {
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
 
-          {/* CTA Content - Left Aligned */}
-          <div className="absolute inset-0 flex items-center">
+          {/* CTA Content - Left Aligned hide below for solutions page */} 
+
+          
+           <div className="absolute inset-0 flex items-center">
             <div className="px-5 sm:px-10 lg:px-16 max-w-2xl">
               <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 font-display">
                 Ready to Transform Your Procurement?
@@ -88,7 +93,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
 
       {/* Main Footer */}
       <div className="border-t border-white/5">
@@ -181,13 +186,13 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="mailto:info@willsmeet.com"
+                  href="mailto:sales@willsmeet.com"
                   className="flex items-center gap-3 text-gray-400 hover:text-brand-400 transition-colors group"
                 >
                   <div className="p-2 rounded-lg bg-brand-500/10 text-brand-400 group-hover:bg-brand-500/20 transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <span className="text-sm">info@willsmeet.com</span>
+                  <span className="text-sm">sales@willsmeet.com</span>
                 </a>
 
                 <a

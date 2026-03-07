@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -12,7 +12,14 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Logo from '../../public/assets/Willsmeet_white.png'
 
-const navLinks = [
+type NavLink = {
+  href: string
+  label: string
+  external?: boolean
+  dropdown?: { label: string; href: string; icon: React.ElementType }[]
+}
+
+const navLinks: NavLink[] = [
   { href: '/', label: 'Home' },
   {
     href: '/solutions',
@@ -37,11 +44,7 @@ const navLinks = [
       { label: 'Leadership', href: '/about#leadership', icon: Users },
     ]
   },
-  {
-    href: 'https://willsmeet.zohorecruit.com/jobs/Careers',
-    label: 'Careers',
-    external: true
-  },
+  { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
 ]
 

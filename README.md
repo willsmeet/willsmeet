@@ -40,6 +40,6 @@ Push to GitHub and connect to Vercel for instant deployment.
 ## 📞 Contact
 
 Willsmeet Office Solutions
-- Email: info@willsmeet.com
+- Email: sales@willsmeet.com
 - Phone: +91 888-416-2162
 - Address: HSR Layout, Bangalore 560102
