@@ -1,11 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Header, Footer, WhatsAppButton, FloatingShare } from '@/components'
 import {
     Briefcase, Heart, Users, Zap, TrendingUp, Shield,
     Coffee, Sparkles, ArrowRight, Star, Globe, Lightbulb,
 } from 'lucide-react'
+
+import CareerBanner from '../../../public/assets/banners/Careerbanner.png'
 
 const perks = [
     {
@@ -71,26 +74,39 @@ export default function CareersPage() {
             <Header />
             <main className="bg-[var(--bg-primary)]">
 
-                {/* Hero Section */}
-                <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+                {/* Page Header */}
+                <section className="relative h-[45vh] min-h-[300px] sm:min-h-[450px] lg:min-h-[550px] flex items-center justify-center overflow-hidden">
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0 bg-[#0d1412]">
+                        <Image
+                            src={CareerBanner}
+                            alt="Careers"
+                            fill
+                            className="object-cover object-center"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-black/40" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/60" />
+                    </div>
+                </section>
+
+                <div className="relative z-10 text-center px-4 -mt-20">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm text-brand-400 border border-white/20 shadow-lg">
+                        <Briefcase className="w-4 h-4" />
+                        Join Our Team
+                    </div>
+                    <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] font-display">
+                        Find the career of <span className="gradient-text">your dreams</span>
+                    </h1>
+                </div>
+
+                <section className="relative flex items-center justify-center overflow-hidden">
                     {/* Background decoration */}
                     <div className="absolute inset-0 bg-grid opacity-30" />
                     <div className="absolute top-20 left-10 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl animate-pulse" />
                     <div className="absolute bottom-20 right-10 w-80 h-80 bg-brand-400/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/3 rounded-full blur-3xl" />
 
-                    <div className="relative z-10 px-4 mx-auto max-w-5xl sm:px-6 lg:px-8 text-center py-20">
-                        {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-sm font-medium rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 shadow-lg shadow-brand-500/5">
-                            <Briefcase className="w-4 h-4" />
-                            Join Our Team
-                        </div>
-
-                        {/* Headline */}
-                        <h1 className="mb-6 text-4xl sm:text-5xl lg:text-3xl xl:text-6xl font-bold text-white leading-[1.1] font-display">
-                            Find the career of{' '}
-                            <span className="gradient-text">your dreams</span>
-                        </h1>
+                    <div className="relative z-10 px-4 mx-auto max-w-5xl sm:px-6 lg:px-8 text-center pb-20 pt-10">
 
                         {/* Subheadline */}
                         <p className="mb-4 text-xl sm:text-xl font-semibold text-white/90">
@@ -109,7 +125,7 @@ export default function CareersPage() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
-                                href="#"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSescIlUM-_wYXGp9SXkpK1x0e5j_7LxB5BE_m1_IHCFnRD0XQ/viewform?usp=publish-editor"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25"
@@ -118,7 +134,7 @@ export default function CareersPage() {
                                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                                 </span>
-                                <span className="relative z-10">Browse Open Positions</span>
+                                <span className="relative z-10">Apply Now</span>
                                 <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                             </a>
 
@@ -229,7 +245,7 @@ export default function CareersPage() {
 
                                 <div className="flex-shrink-0">
                                     <a
-                                        href="#"
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSescIlUM-_wYXGp9SXkpK1x0e5j_7LxB5BE_m1_IHCFnRD0XQ/viewform?usp=publish-editor"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group relative inline-flex items-center gap-3 px-8 py-4 font-semibold text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-brand-500/30"
@@ -239,7 +255,7 @@ export default function CareersPage() {
                                             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                                         </span>
                                         <Briefcase className="relative z-10 w-5 h-5" />
-                                        <span className="relative z-10">View All Jobs</span>
+                                        <span className="relative z-10">Apply Now</span>
                                         <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                                     </a>
                                 </div>
