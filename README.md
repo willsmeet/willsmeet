@@ -1,6 +1,6 @@
 # Willsmeet Office Solutions - Next.js Website
 
-A professional B2B website built with Next.js 14, TypeScript, and Tailwind CSS featuring a **dark theme with teal/emerald green accents**.
+A professional B2B website built with Next.js 14, TypeScript, and Tailwind CSS featuring a **dark theme with teal/emerald green accents **.
 
 ## 🎨 Design
 
