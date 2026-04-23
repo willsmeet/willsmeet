@@ -63,6 +63,24 @@ const solutions = [
     image: '/assets/Images/OfficeSetupNeeds1.jpg',
     href: '/solutions#setup', // UPDATED
   },
+  {
+  id: "ppe",
+  icon: ShieldCheck,
+  title: "Personal Protective Equipment",
+  description:
+    "A complete range of safety gear including helmets, gloves, masks, goggles, reflective jackets, and safety footwear designed to protect workers across industrial environments. It helps organisations ensure safety compliance and reduce workplace risks in construction, manufacturing, and facility operations.",
+  image: '/assets/Images/ppe1.jpg',
+  href: "/solutions#ppe"
+},
+{
+  id: "hardware",
+  icon: Building2,
+  title: "Hardware Materials",
+  description:
+    "A complete range of hardware and power tools including drills, grinders, screwdrivers, wrenches, fasteners, and industrial fittings designed for construction, maintenance, and manufacturing needs. Built for durability, precision, and high performance across all professional applications.",
+  image: '/assets/Images/HardwareMaterials2.jpg',
+  href: "/solutions#hardware"
+}
 ]
 
 export default function Solutions() {

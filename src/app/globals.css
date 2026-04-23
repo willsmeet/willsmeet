@@ -12,8 +12,8 @@
   --bg-card: #111916;
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;
-  --brand: #10b981;
-  --brand-light: #34d399;
+  --brand: #0099CC;
+  --brand-light:#0099CC;
 }
 
 @layer base {
