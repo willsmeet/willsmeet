@@ -125,7 +125,7 @@ export default function CareersPage() {
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSescIlUM-_wYXGp9SXkpK1x0e5j_7LxB5BE_m1_IHCFnRD0XQ/viewform?usp=publish-editor"
+                                href="https://www.linkedin.com/company/willsmeet"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative inline-flex items-center gap-2 px-8 py-4 font-semibold text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25"
@@ -245,7 +245,7 @@ export default function CareersPage() {
 
                                 <div className="flex-shrink-0">
                                     <a
-                                        href="https://docs.google.com/forms/d/e/1FAIpQLSescIlUM-_wYXGp9SXkpK1x0e5j_7LxB5BE_m1_IHCFnRD0XQ/viewform?usp=publish-editor"
+                                        href="https://www.linkedin.com/company/willsmeet"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="group relative inline-flex items-center gap-3 px-8 py-4 font-semibold text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-brand-500/30"

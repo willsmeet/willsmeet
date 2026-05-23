@@ -366,7 +366,7 @@ export default function SolutionsPage() {
                         {solution.whyChoose.map((item, i) => (
                           <li key={i} className="flex items-start gap-3">
                             <div className="p-1 bg-green-500/10 border border-green-500/20 rounded-full mt-0.5">
-                              <CheckCircle className="w-4 h-4 text-green-400" />
+                              <CheckCircle className="w-4 h-4 text-brand-400" />
                             </div>
                             <span className="text-gray-400">{item}</span>
                           </li>

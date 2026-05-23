@@ -65,7 +65,25 @@ const faqCategories = [
       { q: 'Do you provide customised packages for startups?', a: 'Absolutely - we help startups set up efficiently while keeping budgets in check.' },
       { q: 'Can you assist with recurring replenishments post-setup?', a: 'Yes, we continue as your long-term supply partner beyond the initial setup.' },
     ]
-  }
+  },
+  {
+  title: 'Personal Protective Equipment (PPE)',
+  items: [
+     { q: 'How does Willsmeet help us stay PPE compliant?', a: 'All our PPE meets required safety standards, keeping your team protected and your business compliant without the hassle.' },
+    { q: 'Can you manage PPE supply across multiple sites?', a: 'Yes - our portal lets you order and track PPE for all locations from one place, so no site ever runs short.' },
+    { q: 'How do we avoid PPE running out on-site?', a: 'We set up regular restocking schedules based on your team size, so the right equipment is always available.' },
+    { q: 'What if our team needs specific types of PPE?', a: 'We source role-specific protective equipment, ensuring every worker has exactly what their job requires.' },
+  ]
+},
+{
+  title: 'Hardware Materials',
+  items: [
+   { q: 'How does Willsmeet make hardware procurement easier?', a: 'We bring all your hardware needs under one account, so ordering materials for your projects is simple, fast, and hassle-free.' },
+    { q: 'Can you source materials to match our project specifications?', a: 'Yes - we work with your team to source the exact materials you need, so your projects run smoothly without compromise.' },
+    { q: 'How do you ensure materials are available when we need them?', a: 'We maintain strong supplier relationships to keep stock consistent, so your project timelines are never held up by material shortages.' },
+    { q: 'What if we need hardware materials urgently on-site?', a: "Our dark store network ensures faster dispatch, so last-minute material needs don't stall your operations or delay project timelines." },
+  ]
+},
 ]
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
