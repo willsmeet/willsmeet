@@ -175,6 +175,78 @@ const solutions = [
       'Décor Elements',
     ],
   },
+   {
+  id: 'ppe',
+  icon: ShieldCheck,
+  title: 'Personal Protective Equipment',
+  tagline: 'Safety First. Protection Always. Compliance You Can Trust.',
+ description: 'Essential safety gear to protect workers in construction, factories, and industrial environments for safer daily operations.',
+
+  cta: 'Strengthen Workplace Safety from Willsmeet',
+
+  images: [
+    'https://i.pinimg.com/736x/ed/5b/4a/ed5b4aa10580eba1ab2cc0a183ad0e02.jpg',
+    'https://i.pinimg.com/736x/9e/77/af/9e77af06493af749630bcaa76f28a596.jpg'
+  ],
+
+  color: 'from-orange-500 to-red-500',
+  bgColor: 'bg-orange-500/10',
+
+ serviceOverview: "Willsmeet provides complete PPE safety gear to keep workers safe at every job site. We offer helmets, gloves, masks, goggles, jackets, and safety shoes that protect from injuries and make work safer and easier. All products are strong, comfortable, and made for daily industrial use.",
+
+  whyChoose: [
+    'Comprehensive protection solutions covering all workplace hazards.',
+    'Scalable bulk supply for industrial and enterprise requirements.',
+    'Strict quality assurance ensuring maximum reliability and protection.',
+    'Efficient logistics for timely delivery across project sites.'
+  ],
+
+ features: [
+  'Safety Helmets for head protection',
+  'Protective Gloves for hand safety',
+  'Face Masks for dust and air protection',
+  'Safety Goggles for eye protection',
+  'Reflective Jackets for visibility at work sites',
+  'Safety Shoes for foot protection'
+]
+},
+
+{
+  id: 'hardware',
+  icon: Building2,
+  title: 'Hardware Materials',
+  tagline: 'Build Smart. Stay Equipped. Deliver Excellence.',
+  description: 'A complete range of hardware and power tools designed for construction, industrial, and maintenance work with reliable performance and durability.',
+
+  cta: 'Get Hardware & Tool Solutions with Willsmeet',
+
+  images: [
+    'https://i.pinimg.com/1200x/83/91/98/839198dff564626bcb99e50c283d371e.jpg',
+    'https://i.pinimg.com/1200x/12/18/9e/12189e14312f38e8f28cd7a9350d5f72.jpg'
+  ],
+
+  color: 'from-blue-600 to-cyan-500',
+  bgColor: 'bg-blue-500/10',
+
+  serviceOverview:
+  "We supply quality hardware tools and materials for industrial, and maintenance needs with reliable performance and timely delivery.",
+
+  whyChoose: [
+    'High-quality hardware and power tools from trusted brands.',
+    'Reliable supply chain with timely delivery support.',
+    'Cost-effective solutions for all project sizes.',
+    'Strict quality checks for long-lasting performance.'
+  ],
+
+  features: [
+    'Power Tools & Equipment',
+    'Hand Tools & Accessories',
+    'Fasteners & Fixing Solutions',
+    'Industrial Hardware Components',
+    'Maintenance Tools',
+    'Construction Support Tools'
+  ]
+}
 ]
 
 export default function SolutionsPage() {

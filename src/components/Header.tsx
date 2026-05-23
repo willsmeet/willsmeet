@@ -31,6 +31,8 @@ const navLinks: NavLink[] = [
       { label: 'Packaging', href: '/solutions#packaging', icon: Package },
       { label: 'Corporate Gifting', href: '/solutions#gifting', icon: Gift },
       { label: 'Office Setup', href: '/solutions#setup', icon: Building2 },
+       {label: 'Personal Protective Equipment',href:'/solutions#ppe',icon:ShieldCheck},
+      {label:'Hardware Materials',href:'/solutions#hardware',icon:Building2}
     ]
   },
   {
