@@ -157,7 +157,7 @@ export default function Footer() {
                 ))}
                 <li>
                   <a
-                    href="https://willsmeet.zohorecruit.com/jobs/Careers"
+                    href="https://www.linkedin.com/company/willsmeet"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 text-gray-400 hover:text-brand-400 transition-colors text-sm"

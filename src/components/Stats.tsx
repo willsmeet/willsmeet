@@ -137,8 +137,8 @@ export default function Stats() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
             <div className="relative flex h-full min-h-[220px] sm:min-h-[280px] flex-col justify-end p-4 sm:p-5">
               <div className="mb-1 flex items-center gap-1.5">
-                <Package className="h-3.5 w-3.5 text-emerald-400" />
-                <span className="text-xs font-medium text-emerald-400">
+                <Package className="h-3.5 w-3.5 text-brand-400" />
+                <span className="text-xs font-medium text-brand-400">
                   Workplace Essentials
                 </span>
               </div>
@@ -265,7 +265,7 @@ export default function Stats() {
             <div className="relative min-h-[200px] sm:min-h-[180px] p-4 sm:p-5">
               {/* Header */}
               <div className="mb-1 flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-emerald-400" />
+                <MapPin className="h-4 w-4 text-brand-400" />
                 <span className="text-3xl font-bold text-white">
                   <AnimatedCounter value={7} inView={inView} />
                 </span>

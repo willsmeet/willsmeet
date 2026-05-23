@@ -1,26 +1,94 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useRef } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Sparkles, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+function AnimatedCounter({
+  value,
+  suffix = '',
+  decimals = 0,
+  inView,
+}: {
+  value: number
+  suffix?: string
+  decimals?: number
+  inView: boolean
+}) {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!inView) {
+      setCount(0)
+      return
+    }
+    const duration = 2000
+    const steps = 60
+    const stepValue = value / steps
+    let current = 0
+
+    const timer = setInterval(() => {
+      current += stepValue
+      if (current >= value) {
+        setCount(value)
+        clearInterval(timer)
+      } else {
+        setCount(current)
+      }
+    }, duration / steps)
+
+    return () => clearInterval(timer)
+  }, [inView, value])
+
+  return (
+    <span>
+      {decimals > 0 ? count.toFixed(decimals) : Math.floor(count)}
+      {suffix}
+    </span>
+  )
+}
+
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+   const sectionRef = useRef<HTMLElement>(null)
+    const [inView, setInView] = useState(false)
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setInView(entry.isIntersecting)
+        },
+        { threshold: 0.2 }
+      )
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current)
+      }
+  
+      return () => observer.disconnect()
+    }, [])
+
+  
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
 
+  
+
+
+
   return (
-    <section className="relative overflow-hidden bg-[var(--bg-primary)]">
+    <section  ref={sectionRef} className="relative overflow-hidden bg-[var(--bg-primary)]">
 
       {/* ── Banner with Background Image ── */}
       <div className="relative min-h-[65vh] sm:min-h-[85vh] flex items-center">
         {/* Background image — cover on mobile for full bleed, contain on larger screens */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-contain"
-          style={{ backgroundImage: "url('/assets/banners/Home page banner.png')" }}
+          style={{ backgroundImage: "url('/assets/banners/homepage2.png')" }}
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/50" />
@@ -112,15 +180,22 @@ export default function Hero() {
           )}
         >
           <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-xl">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">61%</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">
+              <AnimatedCounter value={61} suffix="%" inView={inView} />
+
+            </div>
             <div className="text-xs sm:text-sm text-gray-400 mt-1">Delivered in 24hrs</div>
           </div>
           <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-xl">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">97%</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">
+              <AnimatedCounter value={97} suffix="%" inView={inView} />
+            </div>
             <div className="text-xs sm:text-sm text-gray-400 mt-1">Delivered in 48hrs</div>
           </div>
           <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-xl">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">3,000+</div>
+                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">
+                <AnimatedCounter value={3000} suffix="+" inView={inView} />
+              </div>
             <div className="text-xs sm:text-sm text-gray-400 mt-1">Products Available</div>
           </div>
         </div>

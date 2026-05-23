@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect ,useRef} from 'react'
 import { Share2, X, Check, Link2, Facebook, Twitter, Linkedin, Mail } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -62,6 +62,8 @@ export default function FloatingShare() {
   const [isVisible, setIsVisible] = useState(false)
   const [currentUrl, setCurrentUrl] = useState('')
   const [pageTitle, setPageTitle] = useState('')
+  
+  const shareRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     // Get current page URL and title
@@ -90,6 +92,20 @@ export default function FloatingShare() {
     return () => window.removeEventListener('popstate', handleRouteChange)
   }, [])
 
+  useEffect(() => {
+  const handleClickOutside = (event:MouseEvent) => {
+    if (shareRef.current && !shareRef.current.contains(event.target as Node)) {
+      setIsOpen(false)
+    }
+  }
+
+  document.addEventListener('mousedown', handleClickOutside)
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside)
+  }
+}, [])
+
   const handleShare = async (button: typeof shareButtons[0]) => {
     if (button.action === 'copy') {
       await navigator.clipboard.writeText(currentUrl)
@@ -105,11 +121,12 @@ export default function FloatingShare() {
 
   return (
     <div
-      className={cn(
-        'fixed right-0 top-1/2 -translate-y-1/2 z-40 transition-all duration-500',
-        isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-      )}
-    >
+   ref={shareRef}
+   className={cn(
+    'fixed right-0 top-1/2 -translate-y-1/2 z-40 transition-all duration-500',
+    isVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+  )}
+>
       {/* Share Panel */}
       <div
         className={cn(
