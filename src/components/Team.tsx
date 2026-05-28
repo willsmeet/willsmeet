@@ -67,7 +67,7 @@ export default function Leadership() {
             <div className="relative w-full sm:w-[44%] h-72 sm:h-auto overflow-hidden">
         
               <Image
-                src="/assets/owner.jpg"
+                src="/assets/Founder.jpeg"
                 alt="Raju Lakhana - Founder & CEO"
                 fill
                 className="object-cover"

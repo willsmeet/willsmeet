@@ -13,6 +13,7 @@ const navLinks = [
   { label: 'About Us', href: '/about' },
   { label: 'FAQs', href: '/faq' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Careers', href: '/careers' },
 ]
 
 const legalLinks = [
@@ -155,17 +156,8 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <a
-                    href="https://www.linkedin.com/company/willsmeet"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 text-gray-400 hover:text-brand-400 transition-colors text-sm"
-                  >
-                    Careers
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </li>
+                
+                 
               </ul>
             </div>
 

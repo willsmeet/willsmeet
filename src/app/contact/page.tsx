@@ -51,6 +51,8 @@ const services = [
   'Office Setup',
   'Bulk Order Inquiry',
   'Corporate Account',
+  'Personal Protective Equipmentt',
+  'Hardware Materials',
   'Other',
 ]
 

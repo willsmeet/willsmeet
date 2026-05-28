@@ -110,7 +110,7 @@ export default function Solutions() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {solutions.map((solution) => {
             const Icon = solution.icon
             const isHovered = hoveredCard === solution.id

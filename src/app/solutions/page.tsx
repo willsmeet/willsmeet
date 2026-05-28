@@ -294,7 +294,7 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-        <div className="text-center mt-4 px-4 sm:px-6">
+        <div className="text-center mt-4 px-4 sm:px-6 w-full max-w-3xl mx-auto">
           <p className="text-sm sm:text-base lg:text-lg text-gray-400 leading-relaxed mb-4 max-w-3xl lg:max-w-none mx-auto">
             Willsmeet combines AI-driven technology, cloud infrastructure, and a nationwide distribution network to deliver seamless, transparent, and efficient procurement solutions for businesses across India.
             From daily essentials to specialised equipment, we bring 3000+ products

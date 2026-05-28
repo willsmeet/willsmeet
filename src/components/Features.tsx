@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { TrendingUp, Shield, Clock, Users, Layers, MapPin, ArrowUpRight } from 'lucide-react'
+import { TrendingUp, Shield, Clock, Users, Layers, MapPin, ArrowUpRight, LifeBuoy } from 'lucide-react'
 
 const features = [
   {
@@ -41,6 +41,22 @@ const features = [
     image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80&fit=crop&auto=format',
     stats: { value: '99.99%', label: 'Retention' },
   },
+ 
+
+{
+  icon: LifeBuoy,
+  title: "Fast & Reliable Delivery",
+  description: [
+    "Quick and secure delivery to your location ",
+    "Careful handling of all packages ",
+    "Timely updates on delivery status",
+  ],
+  image:
+    "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80&fit=crop&auto=format",
+}
+ 
+  
+  
 ]
 
 export default function Features() {

@@ -12,6 +12,8 @@ const services = [
   'Packaging Solutions',
   'Corporate Gifting',
   'Office Setup',
+  'Personal Protective Equipmentt',
+  'Hardware Materials',
   'Other',
 ]
 
@@ -20,7 +22,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Working Hours',
-    value: 'Mon - Sat: 9:00 AM - 6:00 PM',
+    value: 'Mon - Sat: 9:00 AM - 7:00 PM',
     href: null,
   },
 ]
@@ -30,6 +32,7 @@ export default function ContactForm() {
     name: '',
     email: '',
     phone: '',
+    company: '',
     service: '',
     message: '',
   })
@@ -57,6 +60,7 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
+          company: formData.company,
           service: formData.service,
           message: formData.message,
         }),
@@ -66,7 +70,7 @@ export default function ContactForm() {
 
       if (result.success) {
         setStatus('success')
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '' })
         setTimeout(() => setStatus('idle'), 5000)
       } else {
         setStatus('error')
@@ -203,7 +207,8 @@ export default function ContactForm() {
                     </div>
                   </div>
 
-                  <div>
+                 <div  className="grid gap-5 sm:grid-cols-2">
+                   <div>
                     <label className="block mb-2 text-sm font-medium text-gray-300">Email Address *</label>
                     <input
                       type="email"
@@ -214,6 +219,19 @@ export default function ContactForm() {
                       className={inputClass}
                       placeholder="john@company.com"
                     />
+                  </div>
+                  <div>
+                    <label className="block mb-2 text-sm font-medium text-gray-300">Company Name *</label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      required
+                      className={inputClass}
+                      placeholder="Acme Corp"
+                    />
+                  </div>
                   </div>
 
                   <div>

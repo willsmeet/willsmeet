@@ -47,6 +47,7 @@ const navLinks: NavLink[] = [
     ]
   },
   { href: '/careers', label: 'Careers' },
+  {href:'/faq',label:'FAQs'},
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -86,21 +87,21 @@ export default function Header() {
         mobileMenuOpen
           ? 'bg-[var(--bg-primary)] border-b border-white/5'
           : isScrolled
-            ? 'bg-[var(--bg-primary)]/80 backdrop-blur-xl border-b border-white/5 shadow-sm'
+            ? 'bg-[var(--bg-primary)] backdrop-blur-xl border-b border-white/5 shadow-sm '
             : 'bg-transparent'
       )}
     >
       <nav className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 ">
 
           {/* Logo Wrapper */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-28 md:h-28 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={Logo}
                 alt="Willsmeet Logo"
                 fill
-                className="object-contain"
+                className="object-contain w-full h-full"
                 priority
               />
             </div>
@@ -115,7 +116,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       className={cn(
-                        'flex items-center gap-1 text-sm font-medium transition-colors duration-200 group-hover:text-brand-400',
+                        'flex items-center gap-1 text-medium font-medium transition-colors duration-200 group-hover:text-brand-400',
                         pathname.startsWith(link.href) ? 'text-brand-500' : 'text-gray-400'
                       )}
                     >
@@ -136,7 +137,7 @@ export default function Header() {
                               <div className="p-2 rounded-lg bg-brand-500/10 text-brand-400 group-hover/item:bg-brand-500 group-hover/item:text-white transition-colors">
                                 <Icon className="w-4 h-4" />
                               </div>
-                              <span className="text-sm font-medium text-gray-300 group-hover/item:text-white">
+                              <span className="text-medium font-medium text-gray-300 group-hover/item:text-white">
                                 {item.label}
                               </span>
                             </Link>
@@ -158,7 +159,7 @@ export default function Header() {
                 >
                   <span
                     className={cn(
-                      'text-sm font-medium transition-colors duration-200',
+                      'text-medium font-medium transition-colors duration-200',
                       pathname === link.href
                         ? 'text-brand-500'
                         : 'text-gray-400 group-hover:text-brand-400'

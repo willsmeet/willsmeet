@@ -26,6 +26,8 @@ const IMAGES = {
     'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80&fit=crop&auto=format',
   orders:
     'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80&fit=crop&auto=format',
+    growth:
+  'https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?w=800&q=80&fit=crop&auto=format',
   hubs:
     'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80&fit=crop&auto=format',
 }
@@ -250,6 +252,24 @@ export default function Stats() {
               <p className="mt-0.5 text-xs text-zinc-300">Orders / Month</p>
             </div>
           </div>
+          <div className="group relative overflow-hidden rounded-2xl">
+            <Image
+            src={IMAGES.growth}
+            alt="Business growth chart showing upward trend"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+            <div className="relative flex h-full min-h-[115px] sm:min-h-[135px] flex-col justify-end p-3 sm:p-4">
+              <TrendingUp className="mb-1 h-3.5 w-3.5 text-green-400" />
+              <div className="text-xl sm:text-2xl font-bold text-white">
+                <AnimatedCounter value={85} suffix="%" inView={inView} />
+              </div>
+                <p className="mt-0.5 text-xs text-zinc-300">Growth Rate</p>
+            </div>
+            </div>
+          
 
           {/* 3 Major Hubs — wide card (col-span-2) */}
           <div className="group relative col-span-1 overflow-hidden rounded-2xl sm:col-span-2">
@@ -322,11 +342,14 @@ export default function Stats() {
                       {city.status}
                     </span>
                   </div>
+                  
                 ))}
               </div>
             </div>
           </div>
+          
         </div>
+        
       </div>
     </section>
   )

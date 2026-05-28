@@ -23,7 +23,7 @@ const clients = [
   { name: 'Unacademy', logo: '/assets/Logos/Unacademy.png' },
   { name: 'Wipro', logo: '/assets/Logos/Wipro.png' },
   // Added isDark flag for Zolo
-  { name: 'Zolo', logo: '/assets/Logos/Zolostays.png', isDark: true },
+  //{ name: 'Zolo', logo: '/assets/Logos/Zolostays.png', isDark: true },
 ]
 
 const firstRow = clients.slice(0, 9)

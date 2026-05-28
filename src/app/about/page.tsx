@@ -62,7 +62,9 @@ const milestones = [
   { year: '2020', title: 'Founded', description: 'Incorporated during the pandemic and built resilience from day one' },
   { year: '2021-22', title: '₹1.69 Cr', description: 'Revenue grew from ₹0.23 Cr to ₹1.69 Cr' },
   { year: '2022-23', title: '₹19 Cr', description: 'Crossed ₹19 Cr milestone with rapid scale' },
-  { year: '2023-24', title: '₹29 Cr', description: 'Surged to ₹29 Cr revenue with 500+ clients onboard' },
+  { year: '2023-24', title: '₹24 Cr', description: 'Surged to ₹24 Cr revenue with 500+ clients onboard' },
+  { year: '2024-25', title: '₹29 Cr', description: 'Achieved ₹29 Cr revenue, strengthening presence across a growing 500+ client base' },
+{ year: '2025-26', title: '₹35 Cr', description: 'Scaled to ₹35 Cr revenue, driven by national expansion and deeper enterprise adoption' },
   { year: '2030', title: '₹360 Cr', description: 'Expanding nationwide hubs, building next-gen procurement tech, aiming for ₹360 Cr by 2030' },
 ]
 
@@ -552,7 +554,7 @@ export default function AboutPage() {
     <div className="relative w-full sm:w-[44%] h-72 sm:h-auto overflow-hidden">
 
       <Image
-        src="/assets/owner.jpg"
+        src="/assets/Founder.jpeg"
         alt="Raju Lakhana - Founder & CEO"
         fill
         className="object-cover"

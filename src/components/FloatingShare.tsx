@@ -72,7 +72,7 @@ export default function FloatingShare() {
 
     // Show after scrolling
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 200)
+      setIsVisible(window.scrollY > 5)
     }
     
     window.addEventListener('scroll', handleScroll)
@@ -189,6 +189,21 @@ export default function FloatingShare() {
             <Share2 className="w-5 h-5" />
           )}
         </button>
+      </div>
+      <div className="mt-4">
+         <button
+          
+          className=
+            'flex items-center gap-2 px-4 py-3 rounded-l-xl text-white shadow-lg transition-all duration-300 hover:scale-105 bg-blue-600 hover:bg-blue-700'
+          
+        >
+          <a href="https://dev.opsportal-willsmeet.com/" target="_blank" rel="noopener noreferrer">
+          <span>
+            Access to portal
+          </span>
+          
+          </a>
+          </button>
       </div>
     </div>
   )
