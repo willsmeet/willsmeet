@@ -98,7 +98,7 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#0a0a0a] py-20 sm:py-24"
+      className="relative overflow-hidden bg-[#0a0a0a] py-20 sm:py-24 stats-section"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/50 to-transparent" />
@@ -287,7 +287,7 @@ export default function Stats() {
               <div className="mb-1 flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-brand-400" />
                 <span className="text-3xl font-bold text-white">
-                  <AnimatedCounter value={7} inView={inView} />
+                  <AnimatedCounter value={6} inView={inView} />
                 </span>
               </div>
               <p className="text-sm font-medium text-white">Major Hubs</p>
@@ -303,8 +303,8 @@ export default function Stats() {
                   { name: 'Pune', code: 'PUN', status: 'Hub' },
                   { name: 'Delhi', code: 'DEL', status: 'Hub' },
                   { name: 'Mumbai', code: 'MUM', status: 'Hub' },
-                  { name: 'Gurgaon', code: 'GGN', status: 'Hub' },
-                  { name: 'Kolkata', code: 'KOL', status: 'Hub' },
+                  { name: 'Chennai', code: 'CHN', status: 'Hub' },
+                 
                 ].map((city) => (
                   <div
                     key={city.code}

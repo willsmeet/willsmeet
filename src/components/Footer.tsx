@@ -4,7 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin, Phone, Mail, Linkedin, Share2, Check, ExternalLink, ArrowRight, ArrowUpRight } from 'lucide-react'
-import Logo from '../../public/assets/Willsmeet_white.png'
+import LogoLight from "../../public/assets/Willsmeet1.jpg"
+import LogoDark from "../../public/assets/Willsmeet2.png"
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
@@ -68,25 +69,25 @@ export default function Footer() {
           {/* CTA Content - Left Aligned hide below for solutions page */} 
 
           
-           <div className="absolute inset-0 flex items-center">
+           <div className="absolute inset-0 flex items-center footer-cta-content">
             <div className="px-5 sm:px-10 lg:px-16 max-w-2xl">
-              <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 font-display">
+              <h2 className="footer-cta-title text-xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3 font-display">
                 Ready to Transform Your Procurement?
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 sm:mb-6">
+              <p className="footer-cta-copy text-sm sm:text-base lg:text-lg text-gray-300 mb-4 sm:mb-6">
                 Join 500+ companies who trust Willsmeet for their workplace essentials.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 text-white font-semibold hover:bg-brand-600 transition-all duration-300 shadow-lg shadow-brand-500/30"
+                  className="footer-cta-primary inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-500 text-white font-semibold hover:bg-brand-600 transition-all duration-300 shadow-lg shadow-brand-500/30"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   href="/solutions"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold hover:bg-white/20 transition-all duration-300"
+                  className="footer-cta-secondary inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   Explore Solutions
                 </Link>
@@ -106,10 +107,17 @@ export default function Footer() {
               <Link href="/" className="inline-block mb-5">
                 <div className="relative w-32 h-14">
                   <Image
-                    src={Logo}
-                    alt="Willsmeet Logo"
+                    src={LogoLight}
+                    alt="Willsmeet logo for light theme"
                     fill
-                    className="object-contain object-left "
+                    className="object-contain object-left logo-light"
+                    priority
+                  />
+                  <Image
+                    src={LogoDark}
+                    alt="Willsmeet logo for dark theme"
+                    fill
+                    className="object-contain object-left logo-dark"
                     priority
                   />
                 </div>

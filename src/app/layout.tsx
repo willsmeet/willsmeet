@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import './globals.css'
+import Script from 'next/script'
+import "./globals.css"
 import { FloatingShare, WhatsAppButton } from '@/components'
 
 export const metadata: Metadata = {
@@ -43,6 +44,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function() {
+            try {
+              var storedTheme = localStorage.getItem('theme-mode');
+              var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+              var theme = storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : (prefersLight ? 'light' : 'dark');
+              if (theme === 'light') {
+                document.documentElement.classList.add('light');
+              } else {
+                document.documentElement.classList.remove('light');
+              }
+            } catch (e) {
+              console.error(e);
+            }
+          })();`}
+        </Script>
       </head>
       <body className="min-h-screen">
         <div className="noise-overlay" aria-hidden="true" />

@@ -75,7 +75,7 @@ export default function CareersPage() {
             <main className="bg-[var(--bg-primary)]">
 
                 {/* Page Header */}
-                <section className="relative h-[45vh] min-h-[300px] sm:min-h-[450px] lg:min-h-[550px] flex items-center justify-center overflow-hidden">
+                <section className="relative h-[45vh] min-h-[300px] sm:min-h-[450px] lg:min-h-[750px] flex items-center justify-center overflow-hidden">
                     {/* Background Image */}
                     <div className="absolute inset-0 z-0 bg-[#0d1412]">
                         <Image
@@ -85,13 +85,13 @@ export default function CareersPage() {
                             className="object-cover object-center"
                             priority
                         />
-                        <div className="absolute inset-0 bg-black/40" />
+                        <div className="absolute inset-0 bg-black/30" />
                         <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/60" />
                     </div>
                 </section>
 
                 <div className="relative z-10 text-center px-4 -mt-20">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium rounded-full bg-white/10 backdrop-blur-sm text-brand-400 border border-white/20 shadow-lg">
+                    <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-6 text-sm font-medium rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 backdrop-blur-sm">
                         <Briefcase className="w-4 h-4" />
                         Join Our Team
                     </div>
@@ -191,7 +191,7 @@ export default function CareersPage() {
                                 return (
                                     <div
                                         key={perk.title}
-                                        className="relative p-8 rounded-[2rem] bg-[#0d1412]/40 border border-white/5 backdrop-blur-md transition-all duration-300"
+                                        className="relative p-8 rounded-[2rem]  border border-white/5 backdrop-blur-md transition-all duration-300"
                                     >
 
                                         {/* Card Content Wrapper */}

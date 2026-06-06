@@ -175,78 +175,78 @@ const solutions = [
       'Décor Elements',
     ],
   },
-   {
-  id: 'ppe',
-  icon: ShieldCheck,
-  title: 'Personal Protective Equipment',
-  tagline: 'Safety First. Protection Always. Compliance You Can Trust.',
- description: 'Essential safety gear to protect workers in construction, factories, and industrial environments for safer daily operations.',
+  {
+    id: 'ppe',
+    icon: ShieldCheck,
+    title: 'Personal Protective Equipment',
+    tagline: 'Safety First. Protection Always. Compliance You Can Trust.',
+    description: 'Essential safety gear to protect workers in construction, factories, and industrial environments for safer daily operations.',
 
-  cta: 'Strengthen Workplace Safety from Willsmeet',
+    cta: 'Strengthen Workplace Safety from Willsmeet',
 
-  images: [
-    'https://i.pinimg.com/736x/ed/5b/4a/ed5b4aa10580eba1ab2cc0a183ad0e02.jpg',
-    'https://i.pinimg.com/736x/9e/77/af/9e77af06493af749630bcaa76f28a596.jpg'
-  ],
+    images: [
+      'https://i.pinimg.com/736x/ed/5b/4a/ed5b4aa10580eba1ab2cc0a183ad0e02.jpg',
+      'https://i.pinimg.com/736x/9e/77/af/9e77af06493af749630bcaa76f28a596.jpg'
+    ],
 
-  color: 'from-orange-500 to-red-500',
-  bgColor: 'bg-orange-500/10',
+    color: 'from-orange-500 to-red-500',
+    bgColor: 'bg-orange-500/10',
 
- serviceOverview: "Willsmeet provides complete PPE safety gear to keep workers safe at every job site. We offer helmets, gloves, masks, goggles, jackets, and safety shoes that protect from injuries and make work safer and easier. All products are strong, comfortable, and made for daily industrial use.",
+    serviceOverview: "Willsmeet provides complete PPE safety gear to keep workers safe at every job site. We offer helmets, gloves, masks, goggles, jackets, and safety shoes that protect from injuries and make work safer and easier. All products are strong, comfortable, and made for daily industrial use.",
 
-  whyChoose: [
-    'Comprehensive protection solutions covering all workplace hazards.',
-    'Scalable bulk supply for industrial and enterprise requirements.',
-    'Strict quality assurance ensuring maximum reliability and protection.',
-    'Efficient logistics for timely delivery across project sites.'
-  ],
+    whyChoose: [
+      'Comprehensive protection solutions covering all workplace hazards.',
+      'Scalable bulk supply for industrial and enterprise requirements.',
+      'Strict quality assurance ensuring maximum reliability and protection.',
+      'Efficient logistics for timely delivery across project sites.'
+    ],
 
- features: [
-  'Safety Helmets for head protection',
-  'Protective Gloves for hand safety',
-  'Face Masks for dust and air protection',
-  'Safety Goggles for eye protection',
-  'Reflective Jackets for visibility at work sites',
-  'Safety Shoes for foot protection'
-]
-},
+    features: [
+      'Safety Helmets for head protection',
+      'Protective Gloves for hand safety',
+      'Face Masks for dust and air protection',
+      'Safety Goggles for eye protection',
+      'Reflective Jackets for visibility at work sites',
+      'Safety Shoes for foot protection'
+    ]
+  },
 
-{
-  id: 'hardware',
-  icon: Building2,
-  title: 'Hardware Materials',
-  tagline: 'Build Smart. Stay Equipped. Deliver Excellence.',
-  description: 'A complete range of hardware and power tools designed for construction, industrial, and maintenance work with reliable performance and durability.',
+  {
+    id: 'hardware',
+    icon: Building2,
+    title: 'Hardware Materials',
+    tagline: 'Build Smart. Stay Equipped. Deliver Excellence.',
+    description: 'A complete range of hardware and power tools designed for construction, industrial, and maintenance work with reliable performance and durability.',
 
-  cta: 'Get Hardware & Tool Solutions with Willsmeet',
+    cta: 'Get Hardware & Tool Solutions with Willsmeet',
 
-  images: [
-    'https://i.pinimg.com/1200x/83/91/98/839198dff564626bcb99e50c283d371e.jpg',
-    'https://i.pinimg.com/1200x/12/18/9e/12189e14312f38e8f28cd7a9350d5f72.jpg'
-  ],
+    images: [
+      'https://i.pinimg.com/1200x/83/91/98/839198dff564626bcb99e50c283d371e.jpg',
+      'https://i.pinimg.com/1200x/12/18/9e/12189e14312f38e8f28cd7a9350d5f72.jpg'
+    ],
 
-  color: 'from-blue-600 to-cyan-500',
-  bgColor: 'bg-blue-500/10',
+    color: 'from-blue-600 to-cyan-500',
+    bgColor: 'bg-blue-500/10',
 
-  serviceOverview:
-  "We supply quality hardware tools and materials for industrial, and maintenance needs with reliable performance and timely delivery.",
+    serviceOverview:
+      "We supply quality hardware tools and materials for industrial, and maintenance needs with reliable performance and timely delivery.",
 
-  whyChoose: [
-    'High-quality hardware and power tools from trusted brands.',
-    'Reliable supply chain with timely delivery support.',
-    'Cost-effective solutions for all project sizes.',
-    'Strict quality checks for long-lasting performance.'
-  ],
+    whyChoose: [
+      'High-quality hardware and power tools from trusted brands.',
+      'Reliable supply chain with timely delivery support.',
+      'Cost-effective solutions for all project sizes.',
+      'Strict quality checks for long-lasting performance.'
+    ],
 
-  features: [
-    'Power Tools & Equipment',
-    'Hand Tools & Accessories',
-    'Fasteners & Fixing Solutions',
-    'Industrial Hardware Components',
-    'Maintenance Tools',
-    'Construction Support Tools'
-  ]
-}
+    features: [
+      'Power Tools & Equipment',
+      'Hand Tools & Accessories',
+      'Fasteners & Fixing Solutions',
+      'Industrial Hardware Components',
+      'Maintenance Tools',
+      'Construction Support Tools'
+    ]
+  }
 ]
 
 export default function SolutionsPage() {
@@ -256,9 +256,9 @@ export default function SolutionsPage() {
 
       <main className="bg-[var(--bg-primary)]">
         {/* Hero */}
-        <section className="relative pt-24 sm:pt-32 pb-14 sm:pb-20 overflow-hidden min-h-[48vh] sm:min-h-[60vh] flex items-center">
+        <section className="relative h-[45vh] min-h-[300px] sm:min-h-[450px] lg:min-h-[650px] flex items-center justify-center overflow-hidden">
           {/* Background Banner Image */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 bg-[#0d1412]">
             <Image
               src={SolutionsBanner}
               alt="Solutions Background"
@@ -266,54 +266,57 @@ export default function SolutionsPage() {
               className="object-cover opacity-90"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/80 to-[var(--bg-primary)]/30" />
-            <div className="absolute inset-0 bg-black/50" />
+             <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/60" />
+
           </div>
 
-          {/* Background effects */}
-          <div className="absolute inset-0 bg-hero-glow mix-blend-overlay" />
-          <div className="absolute inset-0 bg-grid opacity-30" />
-
-          {/* Floating glow orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute top-40 right-10 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
-
-          <div className="relative z-10 px-4  max-w-7xl sm:px-6 lg:px-8">
-            <div className="max-w-3xl pt-20">
-              <div className="inline-flex items-center gap-2 px-4 py-2  mb-6 text-sm font-medium rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20">
-                <Sparkles className="w-4 h-4" />
-                Complete Workplace Solutions
-              </div>
-
-              <h1 className="-mb-14 sm:-mb-20 text-3xl sm:text-5xl lg:text-6xl font-bold text-white font-display">
-                One Portal. One Partner.{' '}
-                <span className="gradient-text">Infinite Convenience.</span>
-              </h1>
 
 
+        </section>
+        {/* Background effects */}
+        <div className="absolute inset-0 bg-hero-glow mix-blend-overlay" />
+        <div className="absolute inset-0 bg-grid opacity-30" />
+
+        {/* Floating glow orbs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute top-40 right-10 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div className="relative z-10 text-center px-4 -mt-20">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-6 text-sm font-medium rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4 " />
+            Complete Workplace Solutions
+          </div>
+          <h1 className="-mb-14 sm:-mb-20 text-3xl sm:text-5xl lg:text-6xl font-bold text-white font-display">
+            One Portal. One Partner.{' '}
+            <br />
+            <span className="gradient-text mt-2 text-4xl">Infinite Convenience.</span>
+          </h1>
+
+
+        </div>
+        <section className="relative flex items-center justify-center overflow-hidden mt-10 sm:mt-16 mb-20">
+          <div className="absolute inset-0 bg-grid opacity-50" />
+          <div className="relative z-10 px-4 mx-auto max-w-5xl sm:px-6 lg:px-8 text-center pb-20 pt-10">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-400 leading-relaxed mb-4 max-w-3xl lg:max-w-none mx-auto">
+              Willsmeet combines AI-driven technology, cloud infrastructure, and a nationwide distribution network to deliver seamless, transparent, and efficient procurement solutions for businesses across India.
+              From daily essentials to specialised equipment, we bring 3000+ products
+              under one roof with data-driven logistics and 24/7 support.
+            </p>
+
+            {/* Quick Navigation */}
+            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center px-2 sm:px-0">
+              {solutions.map((solution) => (
+                <a
+                  key={solution.id}
+                  href={`#${solution.id}`}
+                  className="px-4 py-2 text-sm font-medium text-gray-400 bg-white/5 rounded-full border border-white/10 hover:border-brand-500/30 hover:text-brand-400 hover:bg-white/10 transition-all backdrop-blur-sm"
+                >
+                  {solution.title}
+                </a>
+              ))}
             </div>
           </div>
         </section>
-        <div className="text-center mt-4 px-4 sm:px-6 w-full max-w-3xl mx-auto">
-          <p className="text-sm sm:text-base lg:text-lg text-gray-400 leading-relaxed mb-4 max-w-3xl lg:max-w-none mx-auto">
-            Willsmeet combines AI-driven technology, cloud infrastructure, and a nationwide distribution network to deliver seamless, transparent, and efficient procurement solutions for businesses across India.
-            From daily essentials to specialised equipment, we bring 3000+ products
-            under one roof with data-driven logistics and 24/7 support.
-          </p>
-
-          {/* Quick Navigation */}
-          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center px-2 sm:px-0">
-            {solutions.map((solution) => (
-              <a
-                key={solution.id}
-                href={`#${solution.id}`}
-                className="px-4 py-2 text-sm font-medium text-gray-400 bg-white/5 rounded-full border border-white/10 hover:border-brand-500/30 hover:text-brand-400 hover:bg-white/10 transition-all backdrop-blur-sm"
-              >
-                {solution.title}
-              </a>
-            ))}
-          </div>
-        </div>
 
         {/* Solutions */}
         {solutions.map((solution, index) => {
@@ -335,13 +338,19 @@ export default function SolutionsPage() {
                   {/* Text Content */}
                   <div className={!isEven ? 'lg:order-2' : ''}>
                     {/* Icon & Title */}
-                    <div className={`inline-flex items-center justify-center w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br ${solution.color} text-white shadow-lg shadow-brand-500/20`}>
-                      <Icon className="w-7 h-7" />
-                    </div>
+                    <div className="flex items-center gap-6 mb-4">
+                      <div className="flex items-center gap-6 mb-4">
+                        <div
+                          className={`inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br ${solution.color} text-white shadow-lg shadow-brand-500/20`}
+                        >
+                          <Icon className="w-7 h-7" />
+                        </div>
 
-                    <h2 className="mb-2 text-3xl font-bold text-white sm:text-4xl font-display">
-                      {solution.title}
-                    </h2>
+                        <h2 className="text-2xl sm:text-4xl font-bold text-white font-display">
+                          {solution.title}
+                        </h2>
+                      </div>
+                    </div>
 
                     <p className="mb-4 text-lg font-semibold text-brand-400">
                       {solution.tagline}

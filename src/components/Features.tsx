@@ -21,10 +21,10 @@ const features = [
   {
     icon: MapPin,
     title: 'Nationwide Coverage',
-    description: 'Pan-India reach from 7 major hubs.',
+    description: 'Pan-India reach from 6 major hubs.',
     // ✅ Fleet of delivery trucks = nationwide logistics network
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80&fit=crop&auto=format',
-    cities: ['Bangalore', 'Hyderabad', 'Pune', 'Delhi', 'Mumbai', 'Gurgaon', 'Kolkata'],
+    cities: ['Bangalore', 'Hyderabad', 'Pune', 'Delhi', 'Mumbai', 'Chennai'],
   },
   {
     icon: Clock,
@@ -75,10 +75,10 @@ export default function Features() {
             <Shield className="w-4 h-4" />
             Why Choose Us
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-primary)] mb-4 font-display">
             Why Companies Trust Willsmeet
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
             Technology First. Trust Always.
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function Features() {
         {/* Bento Grid - Different layout from Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Featured Large Card */}
-          <div className="lg:col-span-2 lg:row-span-2 h-[260px] sm:h-[340px] lg:h-auto rounded-3xl relative overflow-hidden group border border-white/10 hover:border-brand-500/30 transition-colors duration-500">
+          <div className="lg:col-span-2 lg:row-span-2 h-[260px] sm:h-[340px] lg:h-auto rounded-3xl relative overflow-hidden group feature-card hover:border-brand-500/30 transition-colors duration-500">
             {/* Image - Full Coverage */}
             <Image
               src={features[0].image}
@@ -97,26 +97,26 @@ export default function Features() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-0 feature-overlay" />
 
             {/* Content */}
             <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 flex flex-col justify-between z-10">
               {/* Top - Icon badge */}
               <div className="flex justify-between items-start">
-                <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+                <div className="p-3 rounded-2xl feature-badge">
                   <Layers className="w-6 h-6 text-brand-400" />
                 </div>
-                <div className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="p-2 rounded-full feature-badge opacity-0 group-hover:opacity-100 transition-opacity">
                   <ArrowUpRight className="w-5 h-5 text-white" />
                 </div>
               </div>
 
               {/* Bottom - Text */}
               <div>
-                <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-2 sm:mb-3">
+                <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold text-[var(--text-primary)] mb-2 sm:mb-3">
                   {features[0].title}
                 </h3>
-                <p className="text-base sm:text-lg text-gray-300 max-w-md">
+                <p className="text-base sm:text-lg text-[var(--text-secondary)] max-w-md">
                   {features[0].description}
                 </p>
               </div>
@@ -130,7 +130,7 @@ export default function Features() {
             return (
               <div
                 key={feature.title}
-                className="h-[220px] sm:h-[280px] rounded-3xl relative overflow-hidden group border border-white/10 hover:border-brand-500/30 transition-colors duration-500"
+                className="h-[220px] sm:h-[280px] rounded-3xl relative overflow-hidden group feature-card hover:border-brand-500/30 transition-colors duration-500"
               >
                 {/* Image - Full Coverage */}
                 <Image
@@ -142,23 +142,23 @@ export default function Features() {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+                <div className="absolute inset-0 feature-overlay" />
 
                 {/* Content */}
                 <div className="absolute inset-0 p-5 flex flex-col justify-between z-10">
                   {/* Top */}
                   <div className="flex justify-between items-start">
-                    <div className="p-2.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+                    <div className="p-2.5 rounded-xl feature-badge">
                       <Icon className="w-5 h-5 text-brand-400" />
                     </div>
-                    <div className="p-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="p-1.5 rounded-full feature-badge opacity-0 group-hover:opacity-100 transition-opacity">
                       <ArrowUpRight className="w-4 h-4 text-white" />
                     </div>
                   </div>
 
                   {/* Bottom */}
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-1.5">
+                    <h3 className="text-xl font-bold text-[var(--text-primary)] mb-1.5">
                       {feature.title}
                     </h3>
 
@@ -179,7 +179,7 @@ export default function Features() {
                         <span className="text-sm text-gray-400">{feature.stats.label}</span>
                       </div>
                     ) : (
-                      <p className="text-sm text-gray-400">{feature.description}</p>
+                      <p className="text-sm text-[var(--text-secondary)]">{feature.description}</p>
                     )}
                   </div>
                 </div>

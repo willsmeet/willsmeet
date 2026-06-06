@@ -174,7 +174,7 @@ export default function FloatingShare() {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            'flex items-center gap-2 px-4 py-3 rounded-l-xl text-white shadow-lg transition-all duration-300 hover:scale-105',
+            'flex items-center gap-2 px-4 py-3 rounded-l-xl about-cta-primary shadow-lg transition-all duration-300 hover:scale-105',
             isOpen 
               ? 'bg-slate-800 hover:bg-slate-700' 
               : 'bg-blue-600 hover:bg-blue-700'
@@ -194,12 +194,12 @@ export default function FloatingShare() {
          <button
           
           className=
-            'flex items-center gap-2 px-4 py-3 rounded-l-xl text-white shadow-lg transition-all duration-300 hover:scale-105 bg-blue-600 hover:bg-blue-700'
+            'flex items-center gap-2 px-4 py-3 rounded-l-xl about-cta-primary shadow-lg transition-all duration-300 hover:scale-105 bg-blue-600 hover:bg-blue-700'
           
         >
-          <a href="https://dev.opsportal-willsmeet.com/" target="_blank" rel="noopener noreferrer">
+          <a href="/portal"  rel="noopener noreferrer">
           <span>
-            Access to portal
+            Login to Enterprise Procurement Hub
           </span>
           
           </a>

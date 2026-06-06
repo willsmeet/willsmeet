@@ -193,7 +193,7 @@ export default function Solutions() {
             href="/solutions"
             className="btn-primary text-base px-8 py-4 group inline-flex items-center gap-2"
           >
-            <span>View All Solutions</span>
+            <span>No More</span>
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

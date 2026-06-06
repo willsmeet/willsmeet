@@ -16,6 +16,303 @@
   --brand-light: #60a5fa;
 }
 
+html.light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --brand: #2563eb;
+   --brand-light: #60a5fa;
+}
+
+html.light ::selection {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #0f172a;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+html.light .border-white\/10 {
+  border-color: rgba(148, 163, 184, 0.22) !important;
+}
+
+html.light .border-white\/20 {
+  border-color: rgba(148, 163, 184, 0.18) !important;
+}
+
+html.light .border-white\/5 {
+  border-color: rgba(148, 163, 184, 0.18) !important;
+}
+
+html.light .text-gray-300 {
+  color: black !important;
+}
+
+html.light .text-gray-400 {
+  color:black !important;
+}
+
+html.light .hover\:text-brand-400:hover {
+  color: var(--brand-light) !important;
+}
+
+
+html.light .text-white,
+html.light .text-white\/90 {
+  color: var(--text-primary) !important;
+}
+
+html.light .hover\:text-white:hover {
+  color: var(--text-primary) !important;
+}
+
+html.light .bg-gray-900\/50 {
+  background-color: rgba(241, 245, 249, 0.85) !important;
+}
+
+html.light .bg-\[\#0f1115\]\/95 {
+  background-color: rgba(248, 250, 252, 0.92) !important;
+}
+
+html.light .bg-black\/20 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+html.light .bg-black\/30 {
+  background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+html.light .bg-black\/40 {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .bg-black\/50 {
+  background-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light .bg-black\/60 {
+  background-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+html.light .bg-black {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-slate-900,
+html.light .bg-zinc-950 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .border-gray-700 {
+  border-color: rgba(148, 163, 184, 0.35) !important;
+}
+
+html.light .hover\:border-white\/20:hover,
+html.light .hover\:border-white\/10:hover {
+  border-color: rgba(148, 163, 184, 0.25) !important;
+}
+
+html.light .shadow-lg,
+html.light .shadow-xl,
+html.light .shadow-2xl {
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08) !important;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero-gradient-top {
+  background-image: linear-gradient(to top, var(--bg-primary), transparent 55%);
+}
+
+.hero-gradient-left {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), transparent);
+}
+
+.hero-badge {
+  background-color: rgba(0, 0, 0, 0.42);
+  border-color: rgba(59, 130, 246, 0.18);
+}
+
+.hero-info-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-light {
+  display: none;
+}
+
+.logo-dark {
+  display: block;
+}
+
+html.light .logo-light {
+  display: block;
+}
+
+html.light .logo-dark {
+  display: none;
+}
+
+html.light .hero-overlay {
+  background-color: rgba(254, 254, 254, 0.22) !important;
+}
+
+html.light .hero-gradient-top {
+  background-image: linear-gradient(to top, rgba(251, 252, 253, 0.18), transparent 55%) !important;
+}
+
+html.light .hero-gradient-left {
+  background-image: linear-gradient(to left, rgba(237, 239, 244, 0.28), rgba(15, 23, 42, 0.14), transparent) !important;
+}
+
+html.light .hero-badge {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(59, 130, 246, 0.22) !important;
+  color: #0f172a !important;
+}
+
+html.light .hero-info-card {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(148, 163, 184, 0.22) !important;
+}
+
+/* Features section overlays and badges */
+.feature-overlay {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.35), transparent);
+}
+
+.feature-badge {
+  background-color: rgba(0,0,0,0.42);
+  color: #ffffff;
+}
+
+html.light .feature-overlay {
+  background-image: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0.45), transparent) !important;
+}
+
+
+html.light .feature-card h3,
+html.light .feature-card p,
+html.light .feature-card .text-brand-400,
+html.light .feature-card .text-sm,
+html.light .feature-card .text-base {
+  color: #ffffff !important;
+}
+
+html.light .feature-card .px-2\.5.py-1.text-xs {
+  background-color: rgba(255,255,255,0.06) !important;
+  color: var(--brand-light) !important;
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+html.light .about-cta-content .about-cta-title,
+html.light .about-cta-content .about-cta-copy,
+html.light .about-cta-content .about-cta-primary,
+html.light .about-cta-content .about-cta-secondary {
+  color: #ffffff !important;
+}
+
+html.light .about-cta-primary {
+  background-color: #2563eb !important;
+  color: #f9f3f3 !important; ;
+}
+
+html.light .about-cta-secondary {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+html.light .stats-section {
+  background-color: var(--bg-secondary) !important;
+}
+
+
+html.light .stats-section .text-zinc-400,
+html.light .stats-section .text-zinc-300,
+html.light .stats-section .text-zinc-500 {
+  color: var(--text-secondary) !important;
+}
+
+html.light .stats-section .bg-gradient-to-b.from-zinc-900\/50 {
+  background-image: linear-gradient(to bottom, rgba(248, 250, 252, 0.7), transparent) !important;
+}
+
+html.light .stats-section .bg-gradient-to-t.from-black\/85 {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, -0.1), transparent) !important;
+}
+html.light .stats-section .bg-gradient-to-t.from-black\/90 {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, -0.1), rgba(255, 255, 255, 0.1)) !important;
+}
+
+html.light .stats-section .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+html.light .stats-section .border-white\/10 {
+  border-color: rgba(148, 163, 184, 0.18) !important;
+}
+
+html.light .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  color: #1b1919 !important;
+  
+}
+
+html.light .btn-primary {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+.footer-cta-content .footer-cta-title {
+  color: #ffffff !important;
+}
+
+.footer-cta-content .footer-cta-copy {
+  color: #d1d5db !important;
+}
+
+.footer-cta-content .footer-cta-primary {
+  color: #ffffff !important;
+}
+
+.footer-cta-content .footer-cta-secondary {
+  color: #ffffff !important;
+}
+
+html.light .footer-cta-content .footer-cta-title {
+  color: #ffffff !important;
+}
+
+html.light .footer-cta-content .footer-cta-copy {
+  color: #d1d5db !important;
+}
+
+html.light .footer-cta-content .footer-cta-primary {
+  color: #ffffff !important;
+}
+
+html.light .footer-cta-content .footer-cta-secondary {
+  color: #ffffff !important;
+}
+
+html.light .card {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -55,12 +352,88 @@
   }
 
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400;
   }
 
   .glow-box {
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.1);
   }
+}
+
+
+/* Portal page theme support */
+.portal-page {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.portal-page .portal-hero {
+  background-color: #f8fafc;
+}
+
+.portal-page .portal-card,
+.portal-page .portal-step-card,
+.portal-page .portal-info-box,
+.portal-page .portal-form-card,
+.portal-page .portal-dashboard-panel,
+.portal-page .portal-stat-card,
+.portal-page .portal-highlight {
+  background-color: #ffffff;
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+.portal-page .portal-input {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+html:not(.light) .portal-page {
+  background-color: #020705;
+  color: #e2e8f0;
+}
+
+html:not(.light) .portal-page .portal-hero {
+  background-color: #020705;
+}
+
+html:not(.light) .portal-page .portal-card,
+html:not(.light) .portal-page .portal-step-card,
+html:not(.light) .portal-page .portal-info-box,
+html:not(.light) .portal-page .portal-form-card,
+html:not(.light) .portal-page .portal-dashboard-panel,
+html:not(.light) .portal-page .portal-stat-card,
+html:not(.light) .portal-page .portal-highlight {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html:not(.light) .portal-page .portal-input {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html:not(.light) .portal-page .text-slate-950,
+html:not(.light) .portal-page .text-slate-900,
+html:not(.light) .portal-page .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html:not(.light) .portal-page .text-slate-600,
+html:not(.light) .portal-page .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html:not(.light) .portal-page .bg-white,
+html:not(.light) .portal-page .bg-slate-50,
+html:not(.light) .portal-page .bg-slate-100 {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+}
+
+html:not(.light) .portal-page .border-slate-200,
+html:not(.light) .portal-page .border-slate-50 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* Custom scrollbar */

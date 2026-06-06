@@ -116,9 +116,9 @@ export default function ContactPage() {
       <main className="bg-[var(--bg-primary)]">
 
         {/* ── Hero Banner ── */}
-        <section className="relative min-h-[42vh] sm:min-h-[65vh] flex items-end justify-center overflow-hidden">
+        <section className="relative h-[45vh] min-h-[300px] sm:min-h-[450px] lg:min-h-[650px] flex items-center justify-center overflow-hidden">
           {/* Background Banner Image */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 z-0 bg-[#0d1412]">
             <Image
               src="/assets/banners/Contact us page.png"
               alt=""
@@ -126,8 +126,8 @@ export default function ContactPage() {
               className="object-cover object-center"
               priority
             />
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/10" />
+             <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/60" />
           </div>
 
           {/* Floating glow orbs */}
@@ -138,8 +138,8 @@ export default function ContactPage() {
         </section>
 
          {/* Centered heading on banner */}
-          <div className="relative z-10 px-4 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium rounded-full bg-black/40 text-brand-400 border border-brand-500/30 backdrop-blur-md">
+          <div className="relative z-10 px-4 text-center max-w-3xl mx-auto -mt-20">
+           <div className="inline-flex items-center gap-2 px-5 py-2.5 mb-6 text-sm font-medium rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 backdrop-blur-sm">
               <MessageSquare className="w-4 h-4" />
               We're Here to Help
             </div>

@@ -155,20 +155,7 @@ export default function FAQPage() {
               Have questions about procurement, delivery, or custom orders?
               Find everything you need to know below.
             </p>
-
-            {/* Search Bar */}
-            <div className="relative max-w-xl mx-auto">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-500" />
-              </div>
-              <input
-                type="text"
-                placeholder="Search for answers..."
-                className="w-full pl-11 pr-4 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/50 transition-all backdrop-blur-sm"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
+            
           </div>
         </section>
 

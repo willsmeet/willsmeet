@@ -10,7 +10,10 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import Logo from '../../public/assets/Willsmeet_white.png'
+import ThemeToggle from '@/components/ThemeToggle'
+
+import LogoDark from "../../public/assets/Willsmeet2.png"
+
 
 type NavLink = {
   href: string
@@ -35,6 +38,7 @@ const navLinks: NavLink[] = [
       {label:'Hardware Materials',href:'/solutions#hardware',icon:Building2}
     ]
   },
+  { href: '/portal', label: 'Portal' },
   {
     href: '/about',
     label: 'About Us',
@@ -98,10 +102,17 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-14 h-14 sm:w-16 sm:h-16 md:w-28 md:h-28 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
               <Image
-                src={Logo}
-                alt="Willsmeet Logo"
+                src={LogoDark}
+                alt="Willsmeet logo for light theme"
                 fill
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-full logo-light"
+                priority
+              />
+              <Image
+                src={LogoDark}
+                alt="Willsmeet logo for dark theme"
+                fill
+                className="object-contain w-full h-full logo-dark"
                 priority
               />
             </div>
@@ -134,7 +145,7 @@ export default function Header() {
                               href={item.href}
                               className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/item"
                             >
-                              <div className="p-2 rounded-lg bg-brand-500/10 text-brand-400 group-hover/item:bg-brand-500 group-hover/item:text-white transition-colors">
+                              <div className="p-2 rounded-lg bg-brand-500/10 text-brand-500 group-hover/item:bg-brand-500 group-hover/item:text-white transition-colors">
                                 <Icon className="w-4 h-4" />
                               </div>
                               <span className="text-medium font-medium text-gray-300 group-hover/item:text-white">
@@ -169,12 +180,12 @@ export default function Header() {
                   </span>
 
                   {link.external && (
-                    <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-brand-400 transition-colors" />
+                    <ExternalLink className="w-3 h-3 text-gray-400 group-hover:text-brand-500 transition-colors" />
                   )}
 
                   <span
                     className={cn(
-                      'absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-brand-500 to-brand-400 transition-all duration-300',
+                      'absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-brand-600 to-brand-400 transition-all duration-300',
                       pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
                     )}
                   />
@@ -183,11 +194,12 @@ export default function Header() {
             })}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Theme + CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <Link
               href="/contact"
-              className="group relative inline-flex items-center gap-2 px-6 py-2.5 font-medium text-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25"
+              className="group relative inline-flex items-center gap-2 px-6 py-2.5 font-medium about-cta-primary rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-brand-500/25"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-brand-600 to-brand-500" />
               <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -277,10 +289,13 @@ export default function Header() {
               )
             })}
 
+            <div className="pt-4 flex justify-center">
+              <ThemeToggle />
+            </div>
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="block w-full text-center py-3 px-6 bg-gradient-to-r from-brand-600 to-brand-500 text-white font-medium rounded-full hover:shadow-lg hover:shadow-brand-500/25 transition-all duration-300"
+                className="block w-full text-center py-3 px-6 bg-gradient-to-r from-brand-600 to-brand-500 about-cta-primary font-medium rounded-full hover:shadow-lg hover:shadow-brand-500/25 transition-all duration-300"
               >
                 Get Started
               </Link>

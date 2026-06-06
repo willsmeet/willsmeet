@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { ArrowRight, Sparkles, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
+type ThemeMode = 'light' | 'dark'
+
 function AnimatedCounter({
   value,
   suffix = '',
@@ -51,17 +53,33 @@ function AnimatedCounter({
 
 
 export default function Hero() {
+  const [theme, setTheme] = useState<ThemeMode>('dark')
   const [isVisible, setIsVisible] = useState(false)
-   const sectionRef = useRef<HTMLElement>(null)
-    const [inView, setInView] = useState(false)
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setInView(entry.isIntersecting)
-        },
-        { threshold: 0.2 }
-      )
+  const sectionRef = useRef<HTMLElement>(null)
+  const [inView, setInView] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const updateTheme = () => {
+      setTheme(document.documentElement.classList.contains('light') ? 'light' : 'dark')
+    }
+
+    updateTheme()
+
+    const observer = new MutationObserver(() => updateTheme())
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting)
+      },
+      { threshold: 0.2 }
+    )
   
       if (sectionRef.current) {
         observer.observe(sectionRef.current)
@@ -84,17 +102,22 @@ export default function Hero() {
     <section  ref={sectionRef} className="relative overflow-hidden bg-[var(--bg-primary)]">
 
       {/* ── Banner with Background Image ── */}
-      <div className="relative min-h-[65vh] sm:min-h-[85vh] flex items-center">
+      <div className="relative min-h-[65vh] sm:min-h-[99vh] flex items-center">
         {/* Background image — cover on mobile for full bleed, contain on larger screens */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-contain"
-          style={{ backgroundImage: "url('/assets/banners/homepage2.png')" }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat "
+          style={{
+            backgroundImage:
+              theme === 'light'
+                ? "url('/assets/banners/homepage1.png')"
+                : "url('/assets/banners/homepage2.png')",
+          }}
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-black/20" />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 hero-overlay" />
+        <div className="absolute inset-0 hero-gradient-top" />
         {/* Extra gradient on the right side for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 hero-gradient-left" />
 
         {/* Floating dots */}
         <div className="absolute top-32 left-20 w-3 h-3 bg-brand-400 rounded-full animate-pulse-glow" />
@@ -108,7 +131,7 @@ export default function Hero() {
             <div
               className={cn(
                 'inline-flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 mb-6 sm:mb-8 text-xs sm:text-sm font-medium rounded-full border transition-all duration-700',
-                'bg-black/40 text-brand-400 border-brand-500/30 backdrop-blur-md',
+                'hero-badge text-brand-400 backdrop-blur-md',
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               )}
             >
@@ -119,14 +142,14 @@ export default function Hero() {
             {/* Heading */}
             <h1
               className={cn(
-                'text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 leading-[1.1] font-display transition-all duration-700 delay-100',
+                'text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-[1.1] font-display transition-all duration-700 delay-100 text-[var(--text-primary)]',
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               )}
             >
               AI-Powered,
               Lightning-Fast
               <br />
-              <span className="gradient-text">Procurement</span>
+              <span className="gradient-text text-brand-600">Procurement</span>
               {' '}- All in
               <br className="hidden sm:block" />
               {' '}One Place
@@ -158,12 +181,12 @@ export default function Hero() {
       </div>
 
       {/* ── Overlapping Info Section (rides up onto the banner) ── */}
-      <div className="relative z-10 px-4 pb-16 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 px-4 pb-16 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center mt-[2rem] sm:mt-[3rem]">
 
         {/* Subheading */}
         <p
           className={cn(
-            'text-base sm:text-lg text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto transition-all duration-700 delay-300',
+            'text-base sm:text-lg text-[var(--text-secondary)] mb-10 leading-relaxed max-w-2xl mx-auto transition-all duration-700 delay-300',
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           )}
         >
@@ -179,24 +202,24 @@ export default function Hero() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           )}
         >
-          <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-xl">
+          <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl hero-info-card border backdrop-blur-xl">
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">
               <AnimatedCounter value={61} suffix="%" inView={inView} />
 
             </div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Delivered in 24hrs</div>
+            <div className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">Delivered in 24hrs</div>
           </div>
-          <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-xl">
+          <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl hero-info-card border backdrop-blur-xl">
             <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">
               <AnimatedCounter value={97} suffix="%" inView={inView} />
             </div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Delivered in 48hrs</div>
+            <div className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">Delivered in 48hrs</div>
           </div>
-          <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl bg-black/50 border border-white/10 backdrop-blur-xl">
+          <div className="px-4 py-3 sm:px-6 sm:py-4 rounded-2xl hero-info-card border backdrop-blur-xl">
                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-400">
                 <AnimatedCounter value={3000} suffix="+" inView={inView} />
               </div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Products Available</div>
+            <div className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">Products Available</div>
           </div>
         </div>
       </div>

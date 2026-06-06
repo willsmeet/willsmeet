@@ -20,10 +20,11 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <ClientLogos />
         <Stats />
         <Solutions />
         <Features />
-        <ClientLogos />
+       
         <Team />
         <Testimonials />
         {/* <CTA /> */}
