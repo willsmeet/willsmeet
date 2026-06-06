@@ -109,7 +109,7 @@ export default function ContactPage() {
   const whatsappMessage = encodeURIComponent('Hi Willsmeet! I would like to inquire about your services.')
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
 
-  const googleMapsEmbedUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.850904216672!2d77.64369167408357!3d12.917302638288882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15f0d26b3691%3A0x577144e881b449ad!2sWillsmeet!5e0!3m2!1sen!2sin!4v1772883050751!5m2!1sen!2sin'
+  const googleMapsEmbedUrl ="https://maps.google.com/maps?q=12.9186621,77.6451508&z=16&output=embed";
  return (
     <>
       <Header />

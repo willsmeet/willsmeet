@@ -254,7 +254,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-gray-500">
-              Made in Bangalore
+              Made in Bangalore,IND
             </p>
           </div>
         </div>
