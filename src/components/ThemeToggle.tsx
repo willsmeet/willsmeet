@@ -26,7 +26,12 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<ThemeMode>('dark')
 
  useEffect(() => {
-  const nextTheme = getStoredTheme() ?? 'dark'
+  let nextTheme = getStoredTheme()
+
+  if (!nextTheme) {
+    nextTheme = 'dark'
+    localStorage.setItem(storageKey, nextTheme)
+  }
 
   setTheme(nextTheme)
   applyTheme(nextTheme)
