@@ -25,11 +25,12 @@ function applyTheme(theme: ThemeMode) {
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<ThemeMode>('dark')
 
-  useEffect(() => {
-    const nextTheme = getStoredTheme() ?? getSystemTheme()
-    setTheme(nextTheme)
-    applyTheme(nextTheme)
-  }, [])
+ useEffect(() => {
+  const nextTheme = getStoredTheme() ?? 'dark'
+
+  setTheme(nextTheme)
+  applyTheme(nextTheme)
+}, [])
 
   const handleToggle = () => {
     const nextTheme: ThemeMode = theme === 'dark' ? 'light' : 'dark'
