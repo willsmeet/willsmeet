@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import "./globals.css"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { FloatingShare, WhatsAppButton } from '@/components'
 
 export const metadata: Metadata = {
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         {/* <FloatingShare/> */}
         <WhatsAppButton/>
+         <GoogleAnalytics gaId="G-4WX26TLTB1" />
       </body>
     </html>
   )
