@@ -422,16 +422,6 @@ export default function SolutionsPage() {
                             className="object-cover transition-transform duration-700 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                          {/* Overlay Stats - Only on first image */}
-                          {i === 0 && (
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${solution.bgColor} backdrop-blur-md border border-white/20`}>
-                                <Icon className="w-5 h-5 text-white" />
-                                <span className="font-semibold text-white">{solution.features.length}+ Product Categories</span>
-                              </div>
-                            </div>
-                          )}
                         </div>
                       ))}
                     </div>
