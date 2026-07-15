@@ -6,7 +6,6 @@ import { Building2 } from 'lucide-react'
 // Added optional 'isDark' property to the type
 const clients = [
   { name: '3M India', logo: '/assets/Logos/3M India.png' },
-  { name: "BYJU'S", logo: '/assets/Logos/Byjus.png' },
   { name: 'Continental', logo: '/assets/Logos/Continental.png' },
   { name: 'Cult.fit', logo: '/assets/Logos/Cultfit.png' },
   { name: 'Flipkart', logo: '/assets/Logos/Flipkart.png' },
@@ -22,6 +21,7 @@ const clients = [
   { name: 'Udaan', logo: '/assets/Logos/Udaan.png' },
   { name: 'Unacademy', logo: '/assets/Logos/Unacademy.png' },
   { name: 'Wipro', logo: '/assets/Logos/Wipro.png' },
+  { name: "BYJU'S", logo: '/assets/Logos/Byjus.png' },
   // Added isDark flag for Zolo
   //{ name: 'Zolo', logo: '/assets/Logos/Zolostays.png', isDark: true },
 ]
